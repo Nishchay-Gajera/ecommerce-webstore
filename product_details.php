@@ -2,12 +2,12 @@
 // Include necessary files
 require_once 'includes/db_connect.php';
 require_once 'includes/functions.php';
+// The header now includes all necessary stylesheets
 require_once 'includes/header.php';
 
 // Check if a product ID is provided in the URL
 $product_id = $_GET['id'] ?? null;
 if (!$product_id || !is_numeric($product_id)) {
-    // Redirect to the homepage or a product list page if no valid ID is provided
     header('Location: index.php');
     exit;
 }
@@ -21,17 +21,12 @@ if (!$product) {
     exit;
 }
 
-// Fetch related products from the same category with a limit of 7
+// Fetch related products from the same category
 $related_products = getProductsByCategoryId($product['category_id'], 7, $product_id);
-
-// Fetch the product stock for the alert
 $product_stock = getProductStock($product_id);
-
 ?>
 
-<link rel="stylesheet" href="assets/css/product_details.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-
+<!-- The <link> tag has been removed from here and placed in header.php -->
 
 <main class="product-page-content">
     <div class="container product-details-container">
@@ -41,8 +36,10 @@ $product_stock = getProductStock($product_id);
         <div class="product-info-section">
             <h1 class="product-title"><?php echo htmlspecialchars($product['name']); ?></h1>
             <p class="product-price">$<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></p>
-            <?php if ($product_stock !== null && $product_stock < 5): ?>
+            <?php if ($product_stock !== null && $product_stock < 5 && $product_stock > 0): ?>
                 <div class="low-stock-alert">Low Stock! Only <?php echo htmlspecialchars($product_stock); ?> left.</div>
+            <?php elseif ($product_stock !== null && $product_stock == 0): ?>
+                 <div class="low-stock-alert" style="color: red;">Out of Stock!</div>
             <?php endif; ?>
             <div class="short-description">
                 <?php echo nl2br(htmlspecialchars($product['description'])); ?>
@@ -74,7 +71,6 @@ $product_stock = getProductStock($product_id);
         <div class="container">
             <h2 class="section-title">You Might Also Like</h2>
             
-            <!-- Swiper Carousel structure -->
             <div class="swiper related-products-carousel">
                 <div class="swiper-wrapper">
                     <?php if (!empty($related_products)): ?>
@@ -96,14 +92,9 @@ $product_stock = getProductStock($product_id);
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    <?php else: ?>
-                        <div class="swiper-slide">
-                            <p class="text-center w-full">No related products found.</p>
-                        </div>
                     <?php endif; ?>
                 </div>
 
-                <!-- Add Navigation and Pagination -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
@@ -115,8 +106,7 @@ $product_stock = getProductStock($product_id);
 
 <?php require_once 'includes/footer.php'; ?>
 
-<!-- The global script comes first -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
-<!-- The product details script comes second -->
 <script src="assets/js/product_details.js"></script>
+
