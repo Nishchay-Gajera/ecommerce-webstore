@@ -44,7 +44,7 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
 <header class="main-header">
     <div class="container header-content">
         <a href="index.php" class="logo">
-            <img src="uploads/your-logo.png" alt="Aurelie Logo">
+            <img src="images/logo.png" alt="Aurelie Logo">
         </a>
         
         <div class="search-container">
