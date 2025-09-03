@@ -21,8 +21,11 @@ if (!$product) {
     exit;
 }
 
-// Fetch related products from the same category
-$related_products = getProductsByCategoryId($product['category_id'], 10, $product_id);
+// Fetch related products from the same category with a limit of 7
+$related_products = getProductsByCategoryId($product['category_id'], 7, $product_id);
+
+// Fetch the product stock for the alert
+$product_stock = getProductStock($product_id);
 
 ?>
 
@@ -38,6 +41,9 @@ $related_products = getProductsByCategoryId($product['category_id'], 10, $produc
         <div class="product-info-section">
             <h1 class="product-title"><?php echo htmlspecialchars($product['name']); ?></h1>
             <p class="product-price">$<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></p>
+            <?php if ($product_stock !== null && $product_stock < 5): ?>
+                <div class="low-stock-alert">Low Stock! Only <?php echo htmlspecialchars($product_stock); ?> left.</div>
+            <?php endif; ?>
             <div class="short-description">
                 <?php echo nl2br(htmlspecialchars($product['description'])); ?>
             </div>

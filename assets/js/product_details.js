@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // This is the correct script for handling the quantity selector on the product details page.
+    const quantityInput = document.querySelector('.quantity-input');
+    const decreaseBtn = document.querySelector('.decrease-btn');
+    const increaseBtn = document.querySelector('.increase-btn');
+
+    if (quantityInput && decreaseBtn && increaseBtn) {
+        decreaseBtn.addEventListener('click', function() {
+            let currentValue = parseInt(quantityInput.value, 10);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        increaseBtn.addEventListener('click', function() {
+            let currentValue = parseInt(quantityInput.value, 10);
+            quantityInput.value = currentValue + 1;
+        });
+    }
 
     // --- Hamburger Menu Logic ---
     const hamburger = document.querySelector('.hamburger-menu');
@@ -8,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (hamburger && mainNav) {
         hamburger.addEventListener('click', () => {
             mainNav.classList.toggle('is-open');
-            body.classList.toggle('no-scroll'); // Prevents scrolling when menu is open
+            body.classList.toggle('no-scroll');
         });
     }
 
@@ -36,25 +54,21 @@ document.addEventListener('DOMContentLoaded', function () {
     productCarousels.forEach(carousel => {
         new Swiper(carousel, {
             loop: true,
-            slidesPerView: 1, // Default for mobile
+            slidesPerView: 1,
             spaceBetween: 20,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            // Responsive breakpoints
             breakpoints: {
-                // when window width is >= 640px
                 640: {
                     slidesPerView: 2,
                     spaceBetween: 20
                 },
-                // when window width is >= 768px
                 768: {
                     slidesPerView: 3,
                     spaceBetween: 30
                 },
-                // when window width is >= 1024px
                 1024: {
                     slidesPerView: 4,
                     spaceBetween: 30
@@ -62,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-    
+
     // Initialize the new Related Products Carousel
     if (relatedProductsCarousel) {
         new Swiper(relatedProductsCarousel, {

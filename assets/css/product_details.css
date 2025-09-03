@@ -1,7 +1,7 @@
 /* ===================================================================
-   PRODUCT DETAILS PAGE STYLESHEET
-   =================================================================== */
-   
+    PRODUCT DETAILS PAGE STYLESHEET
+    =================================================================== */
+    
 /* --- 0. Product Page Layout --- */
 .product-page-content {
     padding-top: 50px;
@@ -158,19 +158,19 @@
 }
 
 /* Swiper overrides for pagination */
+.swiper-pagination {
+    position: relative !important;
+    bottom: -20px !important;
+}
+
 .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    opacity: 1;
-    border: 1px solid var(--color-dark);
-    border-radius: 50%;
-    margin: 0 5px;
-    transition: all 0.3s ease;
+    background-color: transparent !important;
+    border: 1px solid #333 !important;
+    opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--color-dark);
+    background-color: #333 !important;
 }
 
 /* Product Card Styling (reused from index.css, included here for context) */
@@ -256,10 +256,25 @@
         font-size: 2rem;
     }
     .add-to-cart-form {
-        flex-direction: column;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        align-items: center;
     }
-    .quantity-selector, .add-to-cart-btn {
+    .quantity-selector {
+        width: fit-content;
+    }
+    .quantity-btn {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+    .quantity-input {
+        width: 50px;
+        padding: 8px 3px;
+    }
+    .add-to-cart-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
         width: 100%;
     }
 }
