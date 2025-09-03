@@ -81,7 +81,7 @@ $cart_total = 0;
                             <span>Total</span>
                             <span>$<?php echo number_format($cart_total, 2); ?></span>
                         </div>
-                        <a href="#" class="btn-primary checkout-btn">Proceed to Checkout</a>
+                        <a href="checkout.php" class="btn-primary checkout-btn">Proceed to Checkout</a>
                     </div>
                 </div>
             <?php endif; ?>
