@@ -72,13 +72,15 @@ $all_categories = getAllCategories();
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-image-container">
-                                    <img src="uploads/product-image/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                                    <a href="product_details.php?id=<?php echo $product['id']; ?>">
+                                        <img src="uploads/product-image/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                                    </a>
                                     <div class="product-hover-overlay">
-                                        <a href="#" class="btn-secondary">Quick View</a>
+                                        <a href="product_details.php?id=<?php echo $product['id']; ?>" class="btn-secondary">Quick View</a>
                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h3>
+                                    <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
                                     <p class="product-price">$<?php echo htmlspecialchars($product['price']); ?></p>
                                     <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
                                 </div>
@@ -104,13 +106,15 @@ $all_categories = getAllCategories();
                          <div class="swiper-slide">
                             <div class="product-card">
                                  <div class="product-image-container">
-                                     <img src="uploads/product-image/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                                     <a href="product_details.php?id=<?php echo $product['id']; ?>">
+                                        <img src="uploads/product-image/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                                     </a>
                                      <div class="product-hover-overlay">
-                                         <a href="#" class="btn-secondary">Quick View</a>
+                                         <a href="product_details.php?id=<?php echo $product['id']; ?>" class="btn-secondary">Quick View</a>
                                      </div>
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h3>
+                                    <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
                                     <p class="product-price">$<?php echo htmlspecialchars($product['price']); ?></p>
                                     <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
                                 </div>
