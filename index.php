@@ -102,7 +102,7 @@ $all_categories = getAllCategories();
                                 </div>
                                 <div class="product-info">
                                     <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
-                                    <p class="product-price">$<?php echo htmlspecialchars($product['price']); ?></p>
+                                    <p class="product-price">₹<?php echo htmlspecialchars($product['price']); ?></p>
                                     <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ $all_categories = getAllCategories();
                                 </div>
                                 <div class="product-info">
                                     <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
-                                    <p class="product-price">$<?php echo htmlspecialchars($product['price']); ?></p>
+                                    <p class="product-price">₹<?php echo htmlspecialchars($product['price']); ?></p>
                                     <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@ $product_stock = getProductStock($product_id);
         </div>
         <div class="product-info-section">
             <h1 class="product-title"><?php echo htmlspecialchars($product['name']); ?></h1>
-            <p class="product-price">$<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></p>
+            <p class="product-price">₹<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></p>
             <?php if ($product_stock !== null && $product_stock < 5 && $product_stock > 0): ?>
                 <div class="low-stock-alert">Low Stock! Only <?php echo htmlspecialchars($product_stock); ?> left.</div>
             <?php elseif ($product_stock !== null && $product_stock == 0): ?>
@@ -84,7 +84,7 @@ $product_stock = getProductStock($product_id);
                                     </a>
                                     <div class="product-card-content">
                                         <a href="product_details.php?id=<?php echo $related_product['id']; ?>" class="product-card-title"><?php echo htmlspecialchars($related_product['name']); ?></a>
-                                        <div class="product-card-price">$<?php echo htmlspecialchars(number_format($related_product['price'], 2)); ?></div>
+                                        <div class="product-card-price">₹<?php echo htmlspecialchars(number_format($related_product['price'], 2)); ?></div>
                                         <div class="product-card-actions">
                                             <a href="product_details.php?id=<?php echo $related_product['id']; ?>" class="view-btn">View</a>
                                         </div>

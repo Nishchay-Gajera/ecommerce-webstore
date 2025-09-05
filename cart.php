@@ -54,7 +54,7 @@ $cart_total = 0;
                                     </div>
                                 </div>
                                 <!-- DATA-LABELS ADDED HERE FOR RESPONSIVE STYLES -->
-                                <div class="cart-item-price" data-label="Price">$<?php echo number_format($item['price'], 2); ?></div>
+                                <div class="cart-item-price" data-label="Price">₹<?php echo number_format($item['price'], 2); ?></div>
                                 <div class="cart-item-quantity" data-label="Quantity">
                                     <form action="update_cart.php" method="POST" class="cart-quantity-form">
                                         <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
@@ -62,7 +62,7 @@ $cart_total = 0;
                                         <button type="submit" class="update-btn">Update</button>
                                     </form>
                                 </div>
-                                <div class="cart-item-subtotal" data-label="Subtotal">$<?php echo number_format($subtotal, 2); ?></div>
+                                <div class="cart-item-subtotal" data-label="Subtotal">₹<?php echo number_format($subtotal, 2); ?></div>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -71,7 +71,7 @@ $cart_total = 0;
                         <h2 class="summary-title">Cart Totals</h2>
                         <div class="summary-row">
                             <span>Subtotal</span>
-                            <span>$<?php echo number_format($cart_total, 2); ?></span>
+                            <span>₹<?php echo number_format($cart_total, 2); ?></span>
                         </div>
                         <div class="summary-row">
                             <span>Shipping</span>
@@ -79,7 +79,7 @@ $cart_total = 0;
                         </div>
                         <div class="summary-total">
                             <span>Total</span>
-                            <span>$<?php echo number_format($cart_total, 2); ?></span>
+                            <span>₹<?php echo number_format($cart_total, 2); ?></span>
                         </div>
                         <a href="checkout.php" class="btn-primary checkout-btn">Proceed to Checkout</a>
                     </div>

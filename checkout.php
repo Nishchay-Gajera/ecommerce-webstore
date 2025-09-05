@@ -61,16 +61,16 @@ foreach ($cart_items as $item) {
                         <?php foreach($cart_items as $item): ?>
                         <div class="summary-item">
                             <span><?php echo htmlspecialchars($item['name']); ?> &times; <?php echo $item['quantity']; ?></span>
-                            <span>$<?php echo number_format($item['price'] * $item['quantity'], 2); ?></span>
+                            <span>₹<?php echo number_format($item['price'] * $item['quantity'], 2); ?></span>
                         </div>
                         <?php endforeach; ?>
                         <div class="summary-row subtotal">
                             <span>Subtotal</span>
-                            <span>$<?php echo number_format($cart_total, 2); ?></span>
+                            <span>₹<?php echo number_format($cart_total, 2); ?></span>
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
-                            <strong>$<?php echo number_format($cart_total, 2); ?></strong>
+                            <strong>₹<?php echo number_format($cart_total, 2); ?></strong>
                         </div>
                         <button type="submit" class="btn-primary place-order-btn">Place Order</button>
                     </div>
