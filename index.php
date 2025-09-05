@@ -83,27 +83,33 @@ $all_categories = getAllCategories();
         </section>
 
         <!-- New Arrivals Carousel -->
-        <section id="new-arrivals" class="product-section">
-            <div class="container">
+     <section class="product-section">
+             <div class="container">
                 <h2 class="section-title">New Arrivals</h2>
-                <!-- Swiper -->
+                 <!-- Swiper -->
                 <div class="swiper product-carousel">
                     <div class="swiper-wrapper">
-                        <?php foreach ($new_arrivals as $product): ?>
-                        <div class="swiper-slide">
+                         <?php foreach ($new_arrivals as $product): ?>
+                         <div class="swiper-slide">
                             <div class="product-card">
-                                <div class="product-image-container">
-                                    <a href="product_details.php?id=<?php echo $product['id']; ?>">
+                                 <div class="product-image-container">
+                                     <a href="product_details.php?id=<?php echo $product['id']; ?>">
                                         <img src="uploads/product-image/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
-                                    </a>
-                                    <div class="product-hover-overlay">
-                                        <a href="product_details.php?id=<?php echo $product['id']; ?>" class="btn-secondary">Quick View</a>
-                                    </div>
+                                     </a>
+                                     
+                                     <!-- Wishlist Button -->
+                                     <button class="product-wishlist-btn" title="Add to Wishlist">
+                                         <i class="far fa-heart"></i>
+                                     </button>                                     
+                                     <!-- Hover Overlay -->
+                                     <div class="product-hover-overlay">
+                                         <a href="product_details.php?id=<?php echo $product['id']; ?>" class="btn-secondary">Quick View</a>
+                                     </div>
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
-                                    <p class="product-price">$<?php echo htmlspecialchars($product['price']); ?></p>
-                                    <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
+                                    <a href="product_details.php?id=<?php echo $product['id']; ?>" class="product-name"><?php echo htmlspecialchars($product['name']); ?></a>
+                                    
+                                    <div class="product-price">₹<?php echo number_format($product['price'], 2); ?></div>
                                 </div>
                             </div>
                         </div>
@@ -112,6 +118,9 @@ $all_categories = getAllCategories();
                     <!-- Add Navigation -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+                </div>
+                 <div class="view-all-link">
+                    <a href="#" class="btn-secondary-outline">View All Arrivals</a>
                 </div>
             </div>
         </section>
