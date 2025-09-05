@@ -12,7 +12,7 @@ $all_categories = getAllCategories();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurelie - Wedding & Festive Clothing</title>
+    <title>Divine Syncserv - Wedding & Festive Clothing</title>
     <!-- SwiperJS CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -29,7 +29,7 @@ $all_categories = getAllCategories();
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-background">
-                <img src="https://placehold.co/1920x900/f3e5e0/a36d6d?text=AURELIE" alt="Elegant Wedding Attire">
+                <img src="https://placehold.co/1920x900/f3e5e0/a36d6d?text=Divine Syncserv" alt="Elegant Wedding Attire">
             </div>
             <div class="hero-content">
                 <h1 class="fade-in-up">Elegance Redefined</h1>
