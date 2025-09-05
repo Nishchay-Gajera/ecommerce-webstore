@@ -26,15 +26,36 @@ $all_categories = getAllCategories();
     <?php require_once 'includes/header.php'; ?>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-background">
-                <img src="https://placehold.co/1920x900/f3e5e0/a36d6d?text=Divine Syncserv" alt="Elegant Wedding Attire">
-            </div>
-            <div class="hero-content">
-                <h1 class="fade-in-up">Elegance Redefined</h1>
-                <p class="fade-in-up" style="animation-delay: 0.2s;">Discover timeless pieces crafted for your most cherished moments.</p>
-                <a href="#new-arrivals" class="btn-primary fade-in-up" style="animation-delay: 0.4s;">Explore Collections</a>
+        <!-- Hero Carousel Section -->
+        <section class="hero-carousel">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/1.png" alt="Elegant Wedding Collection">
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/2.png" alt="Festive Traditional Wear">
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+                            <img src="images/3.png" alt="Luxury Fashion Collection">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <div class="swiper-button-next hero-button-next"></div>
+                <div class="swiper-button-prev hero-button-prev"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination hero-pagination"></div>
             </div>
         </section>
 
@@ -159,4 +180,3 @@ $all_categories = getAllCategories();
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-

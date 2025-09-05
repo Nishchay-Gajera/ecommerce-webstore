@@ -29,7 +29,86 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 
-    // --- Responsive SwiperJS Carousel Initialization ---
+    // --- Hero Carousel Initialization ---
+    const heroCarousel = document.querySelector('.hero-swiper');
+    if (heroCarousel) {
+        const heroSwiper = new Swiper(heroCarousel, {
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5 seconds
+                disableOnInteraction: false, // Keep autoplay running after user interaction
+                pauseOnMouseEnter: true, // Pause on hover
+            },
+            effect: 'fade', // Smooth fade transition between slides
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1000, // Transition speed in milliseconds
+            navigation: {
+                nextEl: '.hero-button-next',
+                prevEl: '.hero-button-prev',
+            },
+            pagination: {
+                el: '.hero-pagination',
+                clickable: true,
+                dynamicBullets: false,
+            },
+            // Event handlers
+            on: {
+                // Restart autoplay after any interaction
+                slideChange: function () {
+                    this.autoplay.start();
+                },
+                // Handle touch/drag events
+                touchEnd: function () {
+                    this.autoplay.start();
+                },
+                // Handle navigation click events
+                navigationNext: function () {
+                    this.autoplay.start();
+                },
+                navigationPrev: function () {
+                    this.autoplay.start();
+                },
+                // Handle pagination click events
+                paginationClick: function () {
+                    this.autoplay.start();
+                }
+            }
+        });
+
+        // Additional manual event listeners for navigation arrows
+        const nextBtn = document.querySelector('.hero-button-next');
+        const prevBtn = document.querySelector('.hero-button-prev');
+        const pagination = document.querySelectorAll('.hero-pagination .swiper-pagination-bullet');
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                setTimeout(() => {
+                    heroSwiper.autoplay.start();
+                }, 100);
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                setTimeout(() => {
+                    heroSwiper.autoplay.start();
+                }, 100);
+            });
+        }
+
+        // Handle pagination clicks
+        pagination.forEach(bullet => {
+            bullet.addEventListener('click', function() {
+                setTimeout(() => {
+                    heroSwiper.autoplay.start();
+                }, 100);
+            });
+        });
+    }
+
+    // --- Product Carousels Initialization ---
     const productCarousels = document.querySelectorAll('.product-carousel');
     
     productCarousels.forEach(carousel => {
@@ -63,4 +142,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
