@@ -33,7 +33,7 @@ $all_categories = getAllCategories();
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="hero-slide">
-                            <img src="images/1.png" alt="Elegant Wedding Collection">
+                            <img src="images/1.png"alt="Elegant Wedding Collection">
                         </div>
                     </div>
                     <!-- Slide 2 -->
@@ -102,7 +102,7 @@ $all_categories = getAllCategories();
                                 </div>
                                 <div class="product-info">
                                     <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
-                                    <p class="product-price">₹<?php echo htmlspecialchars($product['price']); ?></p>
+                                    <p class="product-price">$<?php echo htmlspecialchars($product['price']); ?></p>
                                     <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
                                 </div>
                             </div>
@@ -130,14 +130,24 @@ $all_categories = getAllCategories();
                                      <a href="product_details.php?id=<?php echo $product['id']; ?>">
                                         <img src="uploads/product-image/<?php echo htmlspecialchars($product['image_url']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
                                      </a>
+                                     
+                                     <!-- Wishlist Button -->
+                                     <button class="product-wishlist-btn" title="Add to Wishlist">
+                                         <i class="far fa-heart"></i>
+                                     </button>
+                                     
+                                     <!-- Featured Badge -->
+                                     <span class="product-sale-badge">Featured</span>
+                                     
+                                     <!-- Hover Overlay -->
                                      <div class="product-hover-overlay">
                                          <a href="product_details.php?id=<?php echo $product['id']; ?>" class="btn-secondary">Quick View</a>
                                      </div>
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name"><a href="product_details.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['name']); ?></a></h3>
-                                    <p class="product-price">₹<?php echo htmlspecialchars($product['price']); ?></p>
-                                    <a href="#" class="product-like-btn"><i class="far fa-heart"></i></a>
+                                    <a href="product_details.php?id=<?php echo $product['id']; ?>" class="product-name"><?php echo htmlspecialchars($product['name']); ?></a>
+                                    
+                                    <div class="product-price">₹<?php echo number_format($product['price'], 2); ?></div>
                                 </div>
                             </div>
                         </div>
