@@ -22,7 +22,7 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divine Syncserv - Wedding & Festive Clothing</title>
+    <title>Aurelie - Wedding & Festive Clothing</title>
     
     <!-- Main Stylesheet for the entire site -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -32,6 +32,8 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
         <link rel="stylesheet" href="assets/css/product_details.css">
     <?php elseif ($active_page == 'cart.php'): ?>
         <link rel="stylesheet" href="assets/css/cart_style.css">
+    <?php elseif ($active_page == 'checkout.php' || $active_page == 'order_success.php'): ?>
+        <link rel="stylesheet" href="assets/css/checkout_style.css">
     <?php endif; ?>
 
     <!-- External Libraries & Fonts -->
@@ -44,7 +46,7 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
 <header class="main-header">
     <div class="container header-content">
         <a href="index.php" class="logo">
-            <img src="images/logo.png" alt="Divine Syncserv Logo">
+            <img src="images/logo.png" alt="Aurelie Logo">
         </a>
         
         <div class="search-container">

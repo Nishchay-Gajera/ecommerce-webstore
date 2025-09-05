@@ -1,7 +1,8 @@
 /* ===================================================================
-   CHECKOUT PAGE STYLESHEET
+   CHECKOUT & ORDER SUCCESS PAGE STYLESHEET
    =================================================================== */
 
+/* --- Checkout Page Styles --- */
 .checkout-page-content {
     padding: 60px 0;
     background-color: var(--color-light);
@@ -103,11 +104,26 @@ textarea.form-control {
 }
 
 
-/* --- ORDER SUCCESS PAGE --- */
+/* --- CORRECTED: Order Success Page Styles --- */
 .order-success-page-content {
-    padding: 80px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background-color: var(--color-light);
+    min-height: calc(100vh - var(--header-height) - var(--nav-bar-height) - 200px); 
 }
+
+.success-container {
+    background-color: var(--color-white);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
 .success-icon {
     font-size: 5rem;
     color: #28a745;
@@ -121,8 +137,31 @@ textarea.form-control {
 .success-message {
     font-size: 1.2rem;
     color: #555;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    margin-bottom: 10px; /* Small margin after first message */
 }
+
+/* High specificity styles for success page - these match the inline styles that worked */
+main.order-success-page-content .success-container p {
+    font-size: 1.1rem !important;
+    color: #666 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important; /* This creates space before the button */
+}
+
+/* Specific styling for the first paragraph with success-message class */
+main.order-success-page-content .success-container p.success-message {
+    font-size: 1.2rem !important;
+    color: #555 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Button spacing with high specificity - same as inline styles that worked */
+main.order-success-page-content .success-container a.btn-primary {
+    margin-top: 15px !important;
+    display: inline-block !important;
+}
+
 
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
