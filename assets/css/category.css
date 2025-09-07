@@ -10,56 +10,6 @@
     min-height: calc(100vh - var(--header-height) - var(--nav-bar-height));
 }
 
-/* --- Category Header --- */
-.category-header {
-    margin-bottom: 40px;
-}
-
-.category-banner {
-    position: relative;
-    height: 300px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #a67c7c 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.category-banner-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.3;
-}
-
-.category-banner-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: var(--color-white);
-}
-
-.category-title {
-    font-family: var(--font-primary);
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0 0 15px 0;
-    text-transform: capitalize;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.category-description {
-    font-size: 1.2rem;
-    margin: 0;
-    opacity: 0.9;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
 /* --- Category Controls --- */
 .category-controls {
     background: var(--color-white);
@@ -563,20 +513,7 @@
     .category-page-content {
         padding-top: 15px;
         padding-bottom: 60px;
-    }
-    
-    .category-banner {
-        height: 200px;
-    }
-    
-    .category-title {
-        font-size: 2rem;
-    }
-    
-    .category-description {
-        font-size: 1rem;
-    }
-    
+    }  
     .category-controls {
         padding: 15px 20px;
     }
@@ -632,18 +569,46 @@
     }
 }
 
-@media (max-width: 576px) {
-    .container {
-        padding: 0 15px;
+@media (max-width: 992px) {
+    .category-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    .category-banner {
-        height: 180px;
-        margin-bottom: 20px;
+    .filters-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        border-radius: 0;
     }
     
-    .category-title {
-        font-size: 1.8rem;
+    .filters-sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .filter-toggle-btn {
+        display: flex;
+        align-items: center;
+    }
+    
+    .filters-section {
+        justify-content: space-between;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .category-page-content {
+        padding-top: 15px;
+        padding-bottom: 60px;
     }
     
     .products-grid {
@@ -677,6 +642,28 @@
     
     .no-products h3 {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .newsletter-column {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .newsletter-input {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .newsletter-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 14px;
     }
 }
 
@@ -752,67 +739,4 @@
         opacity: 1;
         transform: translateY(0);
     }
-}layout {
-        grid-template-columns: 250px 1fr;
-        gap: 25px;
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-
-@media (max-width: 992px) {
-    .category-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .filters-sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 100vh;
-        z-index: 1000;
-        transform: translateX(-100%);
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        border-radius: 0;
-    }
-    
-    .filters-sidebar.open {
-        transform: translateX(0);
-    }
-    
-    .filter-toggle-btn {
-        display: flex;
-        align-items: center;
-    }
-    
-    .filters-section {
-        justify-content: space-between;
-    }
-    
-    .category-banner {
-        height: 250px;
-    }
-    
-    .category-title {
-        font-size: 2.5rem;
-    }
-    
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
 }
-
-@media (max-width: 768px) {
-    .category-page-content {
-        padding-top: 15px;
-        padding-bottom: 60px;
-    }
-    
-    .category-banner {
-        height: 200px;
-    }}

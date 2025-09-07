@@ -95,19 +95,8 @@ require_once 'includes/header.php';
 
 <main class="category-page-content">
     <div class="container">
-        <!-- Category Header -->
-        <div class="category-header">
-            <div class="category-banner">
-                <?php if ($category['image_url']): ?>
-                    <img src="uploads/categories/<?php echo htmlspecialchars($category['image_url']); ?>" alt="<?php echo htmlspecialchars($category['name']); ?>" class="category-banner-image">
-                <?php endif; ?>
-                <div class="category-banner-content">
-                    <h1 class="category-title"><?php echo htmlspecialchars($category['name']); ?></h1>
-                    <p class="category-description">Discover our exquisite collection of <?php echo strtolower(htmlspecialchars($category['name'])); ?></p>
-                </div>
-            </div>
-        </div>
-
+        <!-- Removed Category Header Section -->
+        
         <!-- Filters and Sort Section -->
         <div class="category-controls">
             <div class="filters-section">
