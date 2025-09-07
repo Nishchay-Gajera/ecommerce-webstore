@@ -34,6 +34,8 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
         <link rel="stylesheet" href="assets/css/cart_style.css">
     <?php elseif ($active_page == 'checkout.php' || $active_page == 'order_success.php'): ?>
         <link rel="stylesheet" href="assets/css/checkout_style.css">
+    <?php elseif ($active_page == 'category.php'): ?>
+        <link rel="stylesheet" href="assets/css/category.css">
     <?php endif; ?>
 
     <!-- External Libraries & Fonts -->
@@ -103,4 +105,3 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
          <li><a href="#">Contact</a></li>
      </ul>
  </nav>
-
