@@ -9,7 +9,8 @@
     5. Forms & Buttons
     6. Page-Specific Layouts (Order Details, Category Management)
     7. Helper Classes (Badges, Messages)
-    8. NEW: WordPress-Style Product Form Layout
+    8. WordPress-Style Product Form Layout
+    9. CSV Import Styles (NEW)
 =================================================================== */
 
 
@@ -266,6 +267,14 @@ body.login-body {
     margin: 0;
     font-weight: 500;
 }
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .breadcrumb {
     list-style: none;
     padding: 0;
@@ -413,6 +422,37 @@ textarea.form-control { min-height: 120px; }
     font-weight: 600;
 }
 
+/* CSV Import Button */
+.btn-import-csv {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.btn-import-csv:hover {
+    background-color: #e08e0b;
+}
+.btn-import-csv i {
+    margin-right: 5px;
+}
+
+.btn-secondary-outline {
+    background-color: transparent;
+    color: #3c8dbc;
+    padding: 8px 15px;
+    border: 1px solid #3c8dbc;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.btn-secondary-outline:hover {
+    background-color: #3c8dbc;
+    color: #fff;
+}
 
 /* --- 6. Page-Specific Layouts --- */
 /* Order Details Layout */
@@ -534,3 +574,298 @@ textarea.form-control { min-height: 120px; }
     display: none; 
 }
 
+/* --- 9. CSV Import Styles --- */
+.csv-import-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.csv-upload-section {
+    min-height: 400px;
+}
+
+.csv-upload-content {
+    padding: 0;
+}
+
+.csv-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.file-upload-area {
+    border: 2px dashed #d0d5dd;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.file-upload-area:hover {
+    border-color: #3c8dbc;
+    background-color: #f0f8ff;
+}
+
+.file-upload-area.dragover {
+    border-color: #3c8dbc;
+    background-color: #e6f3ff;
+    transform: scale(1.02);
+}
+
+.file-upload-icon {
+    font-size: 48px;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+.file-upload-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 8px 0;
+}
+
+.file-upload-text p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 20px 0;
+}
+
+.file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.file-input-label {
+    background-color: #3c8dbc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.file-input-label:hover {
+    background-color: #367fa9;
+}
+
+.file-info {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.file-info p {
+    margin: 4px 0;
+    color: #1e40af;
+}
+
+.csv-import-btn {
+    background-color: #16a34a;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.csv-import-btn:hover {
+    background-color: #15803d;
+}
+
+.csv-import-btn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.instructions-content {
+    padding: 0;
+}
+
+.instructions-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 12px 0;
+}
+
+.csv-columns-list,
+.csv-notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.csv-columns-list li,
+.csv-notes-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 14px;
+    color: #374151;
+}
+
+.csv-columns-list li:last-child,
+.csv-notes-list li:last-child {
+    border-bottom: none;
+}
+
+.csv-columns-list li strong {
+    color: #1f2937;
+    font-family: 'Courier New', monospace;
+    background-color: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.sample-download {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 16px;
+    text-align: center;
+}
+
+.sample-download h4 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+/* Progress Bar for Import */
+.import-progress {
+    background-color: #f3f4f6;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.import-progress-bar {
+    background-color: #3c8dbc;
+    height: 8px;
+    transition: width 0.3s ease;
+    border-radius: 6px;
+}
+
+.import-status {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* CSV Import Results */
+.import-results {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.import-results h4 {
+    color: #1e40af;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+}
+
+.import-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.import-results li {
+    padding: 4px 0;
+    font-size: 14px;
+    color: #1e40af;
+}
+
+.import-results .success {
+    color: #16a34a;
+}
+
+.import-results .error {
+    color: #dc2626;
+}
+
+.import-results .warning {
+    color: #d97706;
+}
+
+/* Responsive Design for CSV Import */
+@media (max-width: 992px) {
+    .csv-import-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .file-upload-area {
+        padding: 30px 15px;
+    }
+    
+    .file-upload-icon {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-actions {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .btn-import-csv,
+    .btn-add-new {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    .file-upload-area {
+        padding: 20px 10px;
+    }
+    
+    .file-upload-text h4 {
+        font-size: 16px;
+    }
+    
+    .file-upload-text p {
+        font-size: 13px;
+    }
+}
+
+/* Table Responsive for CSV Import */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    .product-table {
+        min-width: 600px;
+    }
+}

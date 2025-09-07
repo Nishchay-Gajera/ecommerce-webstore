@@ -38,7 +38,7 @@ try {
     // Check if a filename exists and the file is actually on the server.
     if ($image_filename) {
         // Correct path from /admin/ to /uploads/
-        $file_path = '../uploads/' . $image_filename;
+        $file_path = '../uploads/product-image/' . $image_filename;
         if (file_exists($file_path)) {
             unlink($file_path); // This deletes the file
         }

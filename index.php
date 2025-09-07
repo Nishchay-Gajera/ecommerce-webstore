@@ -172,7 +172,7 @@ $all_categories = getAllCategories();
             </div>
         </section>
 
-        <!-- Shop by Category Section -->
+<!-- Shop by Category Section -->
         <section class="category-section">
             <div class="container">
                 <h2 class="section-title">Shop By Category</h2>
@@ -181,7 +181,7 @@ $all_categories = getAllCategories();
                     <?php if ($index >= 6) break; ?>
                     <div class="category-card">
                         <img src="uploads/categories/<?php echo htmlspecialchars($category['image_url'] ?? 'placeholder.png'); ?>" alt="<?php echo htmlspecialchars($category['name']); ?>">
-                        <a href="#" class="category-link">
+                        <a href="category.php?id=<?php echo $category['id']; ?>" class="category-link">
                             <div class="category-name"><?php echo htmlspecialchars($category['name']); ?></div>
                         </a>
                     </div>
