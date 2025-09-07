@@ -157,26 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // --- Wishlist Functionality ---
-    const wishlistBtns = document.querySelectorAll('.product-wishlist-btn');
-    wishlistBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            const icon = this.querySelector('i');
-            
-            if (this.classList.contains('active')) {
-                icon.classList.remove('far');
-                icon.classList.add('fas');
-                this.style.background = '#e74c3c';
-                this.style.color = '#fff';
-            } else {
-                icon.classList.remove('fas');
-                icon.classList.add('far');
-                this.style.background = '';
-                this.style.color = '';
-            }
-        });
-    });
+    
 
     // --- Smooth Animations ---
     function animateProductCards() {

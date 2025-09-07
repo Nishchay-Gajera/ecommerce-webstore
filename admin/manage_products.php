@@ -30,6 +30,7 @@ try {
     <div class="content-header">
         <h1>Products</h1>
         <div class="header-actions">
+            <a href="import_products_csv.php" class="btn-import-csv"><i class="fas fa-file-csv"></i> Import CSV</a>
             <a href="add_product.php" class="btn-add-new"><i class="fas fa-plus"></i> Add New</a>
         </div>
     </div>
@@ -37,6 +38,10 @@ try {
     <section class="content-body">
         <?php if ($success_message): ?>
             <div class="success-message-box"><?php echo htmlspecialchars($success_message); ?></div>
+        <?php endif; ?>
+        
+        <?php if ($error_message): ?>
+            <div class="error-message-box"><?php echo htmlspecialchars($error_message); ?></div>
         <?php endif; ?>
         
         <div class="content-box">
@@ -97,4 +102,3 @@ try {
 </main>
 
 <?php require_once 'admin_footer.php'; ?>
-
