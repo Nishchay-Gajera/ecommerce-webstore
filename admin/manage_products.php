@@ -84,7 +84,7 @@ try {
                                         <?php endif; ?>
                                     </td>
                                     <td><?php echo htmlspecialchars($product['stock'] ?? 0); ?></td>
-                                    <td>$<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></td>
+                                    <td>₹<?php echo htmlspecialchars(number_format($product['price'], 2)); ?></td>
                                     <td><?php echo htmlspecialchars($product['category_name'] ?? 'Uncategorized'); ?></td>
                                     <td><?php echo date('d M, Y', strtotime($product['created_at'])); ?></td>
                                     <td class="action-links">
