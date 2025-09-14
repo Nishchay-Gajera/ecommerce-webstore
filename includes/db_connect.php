@@ -1,6 +1,11 @@
 <?php
 // --- Database Credentials ---
 // Replace with your actual database details.
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'ecom-web'); // Your database name
+// define('DB_USER', 'root'); // Your database username
+// define('DB_PASS', ''); // Your database password
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'u730228770_ecomme_web'); // Your database name
 define('DB_USER', 'u730228770_ecomme_web_db'); // Your database username

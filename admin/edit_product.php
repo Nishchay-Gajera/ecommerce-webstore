@@ -121,7 +121,7 @@ try {
                         <div class="meta-box-content">
                             <div class="form-row">
                                 <div class="form-group form-group-half">
-                                    <label for="price">Price ($)</label>
+                                    <label for="price">Price (₹)</label>
                                     <input type="number" step="0.01" id="price" name="price" class="form-control" value="<?php echo htmlspecialchars($product['price']); ?>" required>
                                 </div>
                                 <div class="form-group form-group-half">
