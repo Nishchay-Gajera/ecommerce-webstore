@@ -167,7 +167,7 @@ $all_categories = getAllCategories();
                     <div class="swiper-button-prev"></div>
                 </div>
                  <div class="view-all-link">
-                    <a href="/category.php?id=5" class="btn-secondary-outline">View All Featured</a>
+                    <a href="category.php?id=5" class="btn-secondary-outline">View All Featured</a>
                 </div>
             </div>
         </section>
