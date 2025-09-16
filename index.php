@@ -30,7 +30,7 @@ $all_categories = getAllCategories();
         <section class="hero-carousel">
             <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
+                    <!-- Slide 1x -->
                     <div class="swiper-slide">
                         <div class="hero-slide">
                             <a href="category.php?id=6"><img src="images/1.png"alt="Elegant Wedding Collection"></a>
@@ -120,7 +120,7 @@ $all_categories = getAllCategories();
                     <div class="swiper-button-prev"></div>
                 </div>
                  <div class="view-all-link">
-                    <a href="#" class="btn-secondary-outline">View All Arrivals</a>
+                    <a href="/category.php?id=4" class="btn-secondary-outline">View All Arrivals</a>
                 </div>
             </div>
         </section>
@@ -167,7 +167,7 @@ $all_categories = getAllCategories();
                     <div class="swiper-button-prev"></div>
                 </div>
                  <div class="view-all-link">
-                    <a href="#" class="btn-secondary-outline">View All Featured</a>
+                    <a href="/category.php?id=5" class="btn-secondary-outline">View All Featured</a>
                 </div>
             </div>
         </section>
