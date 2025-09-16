@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-column">
-                <h3 class="footer-logo">Divine Syncserv</h3>
+                <h3 class="footer-logo">Divine  syncserve</h3>
                 <p>Timeless elegance for the modern woman. Discover our curated collection of wedding and festive wear.</p>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?php echo date("Y"); ?> Divine Syncserv. All Rights Reserved.</p>
+            <p>&copy; <?php echo date("Y"); ?> Divine  syncserve. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

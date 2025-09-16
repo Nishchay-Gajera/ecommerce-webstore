@@ -22,7 +22,7 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divine Syncserv - Wedding & Festive Clothing</title>
+    <title>Divine  syncserve - Wedding & Festive Clothing</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
     

@@ -34,7 +34,7 @@
             <p>If you wish to exchange an item for a different size or color, please initiate a return for the original item and place a new order for the desired item. This ensures the new item is in stock and ships out to you promptly.</p>
             
             <h2>Damaged or Defective Items</h2>
-            <p>If you receive a damaged or defective item, please contact us immediately at <a href="mailto:support@divinesyncserv.com">support@divinesyncserv.com</a> with your order number and a photo of the issue. We will arrange for a replacement or a full refund at no extra cost to you.</p>
+            <p>If you receive a damaged or defective item, please contact us immediately at <a href="mailto:support@divinesyncserve.com">support@divinesyncserve.com</a> with your order number and a photo of the issue. We will arrange for a replacement or a full refund at no extra cost to you.</p>
 
             <h2>Contact Us</h2>
             <p>If you have any questions about our Return & Refund Policy, please do not hesitate to contact us through our contact page.</p>
