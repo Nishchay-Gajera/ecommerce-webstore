@@ -8,13 +8,13 @@
         </div>
 
         <div class="static-page-body">
-            <p>Divine Syncserv ("us", "we", or "our") operates the https://divinesyncserv.com website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
+            <p>Divine  syncserve ("us", "we", or "our") operates the https://divinesyncserve.com website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
 
             <h2>Information Collection and Use</h2>
             <p>We collect several different types of information for various purposes to provide and improve our Service to you. This may include, but is not limited to, your name, email address, shipping address, and payment information.</p>
 
             <h2>Use of Data</h2>
-            <p>Divine Syncserv uses the collected data for various purposes:</p>
+            <p>Divine  syncserve uses the collected data for various purposes:</p>
             <ul>
                 <li>To provide and maintain the Service</li>
                 <li>To notify you about changes to our Service</li>

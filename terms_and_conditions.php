@@ -8,17 +8,17 @@
         </div>
 
         <div class="static-page-body">
-            <p>Welcome to Divine Syncserv. These terms and conditions outline the rules and regulations for the use of Divine Syncserv's Website, located at https://divinesyncserv.com.</p>
-            <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Divine Syncserv if you do not agree to take all of the terms and conditions stated on this page.</p>
+            <p>Welcome to Divine  syncserve. These terms and conditions outline the rules and regulations for the use of Divine  syncserve's Website, located at https://divinesyncserve.com.</p>
+            <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Divine  syncserve if you do not agree to take all of the terms and conditions stated on this page.</p>
 
             <h2>License</h2>
-            <p>Unless otherwise stated, Divine Syncserv and/or its licensors own the intellectual property rights for all material on Divine Syncserv. All intellectual property rights are reserved. You may access this from Divine Syncserv for your own personal use subjected to restrictions set in these terms and conditions.</p>
+            <p>Unless otherwise stated, Divine  syncserve and/or its licensors own the intellectual property rights for all material on Divine  syncserve. All intellectual property rights are reserved. You may access this from Divine  syncserve for your own personal use subjected to restrictions set in these terms and conditions.</p>
             <p>You must not:</p>
             <ul>
-                <li>Republish material from Divine Syncserv</li>
-                <li>Sell, rent or sub-license material from Divine Syncserv</li>
-                <li>Reproduce, duplicate or copy material from Divine Syncserv</li>
-                <li>Redistribute content from Divine Syncserv</li>
+                <li>Republish material from Divine  syncserve</li>
+                <li>Sell, rent or sub-license material from Divine  syncserve</li>
+                <li>Reproduce, duplicate or copy material from Divine  syncserve</li>
+                <li>Redistribute content from Divine  syncserve</li>
             </ul>
 
             <h2>User Accounts</h2>

@@ -48,17 +48,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
                 <div class="contact-info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Our Address</h3>
-                    <p>123 Fashion Avenue, Surat, Gujarat, 395006, India</p>
+                    <p>708, Akruti Complex Nr, Sahyadri Flats, Nr, Standium Navrangpura Ahmedabad 380009</p>
                 </div>
                 <div class="contact-info-item">
                     <i class="fas fa-envelope"></i>
                     <h3>Email Us</h3>
-                    <p><a href="mailto:support@divinesyncserv.com">support@divinesyncserv.com</a></p>
+                    <p><a href="mailto:support@divinesyncserve.com">support@divinesyncserve.com</a></p>
                 </div>
                 <div class="contact-info-item">
                     <i class="fas fa-phone-alt"></i>
                     <h3>Call Us</h3>
-                    <p><a href="tel:+911234567890">+91 123 456 7890</a></p>
+                    <p><a href="tel:+911234567890">+91 87358 26083  </a></p>
                 </div>
             </div>
         </div>
