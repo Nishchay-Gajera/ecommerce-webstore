@@ -120,7 +120,7 @@ $all_categories = getAllCategories();
                     <div class="swiper-button-prev"></div>
                 </div>
                  <div class="view-all-link">
-                    <a href="/category.php?id=4" class="btn-secondary-outline">View All Arrivals</a>
+                    <a href="category.php?id=4" class="btn-secondary-outline">View All Arrivals</a>
                 </div>
             </div>
         </section>
