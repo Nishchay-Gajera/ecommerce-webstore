@@ -33,19 +33,19 @@ $all_categories = getAllCategories();
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="hero-slide">
-                            <img src="images/1.png"alt="Elegant Wedding Collection">
+                            <a href="category.php?id=6"><img src="images/1.png"alt="Elegant Wedding Collection"></a>
                         </div>
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="hero-slide">
-                            <img src="images/2.png" alt="Festive Traditional Wear">
+                            <a href="category.php?id=4"><img src="images/2.png" alt="Festive Traditional Wear"></a>
                         </div>
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="hero-slide">
-                            <img src="images/3.png" alt="Luxury Fashion Collection">
+                            <a href="category.php?id=5"><img src="images/3.png" alt="Luxury Fashion Collection"></a>
                         </div>
                     </div>
                 </div>

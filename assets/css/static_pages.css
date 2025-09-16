@@ -1,0 +1,239 @@
+/* ===================================================================
+   STATIC & CONTACT & TRACK ORDER PAGE STYLES
+   =================================================================== */
+
+.static-page-content {
+    padding: 60px 0;
+    background-color: var(--color-light);
+    min-height: 60vh;
+}
+
+.static-page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.static-page-header h1 {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+}
+
+.static-page-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.static-page-body {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.static-page-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.static-page-body h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.static-page-body p,
+.static-page-body ul li {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.static-page-body ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* --- Contact Page Layout --- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-form-container {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info-item {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.contact-info-item i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.contact-info-item h3 {
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+}
+
+.contact-info-item p {
+    margin: 0;
+    color: #666;
+}
+.contact-info-item a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-item a:hover {
+    color: var(--color-primary);
+}
+
+
+/* --- Forms --- */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(138, 109, 109, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+/* --- Track Order & Order Status --- */
+.track-order-container,
+.order-status-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.status-card {
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.status-card.success {
+    background-color: #f0fff4;
+    border: 1px solid #7be382;
+}
+.status-card.error {
+    background-color: #fff0f0;
+    border: 1px solid #f37b7b;
+}
+
+.status-card h3 {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    margin: 0 0 20px 0;
+}
+.status-card.success h3 { color: #28a745; }
+.status-card.error h3 { color: #dc3545; }
+
+.status-details {
+    text-align: left;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+.status-details p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.status-details strong {
+    color: var(--color-dark);
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.status-pending { background-color: #f39c12; }
+.status-processing { background-color: #00c0ef; }
+.status-shipped { background-color: #00a65a; }
+.status-delivered { background-color: #3c8dbc; }
+.status-cancelled { background-color: #dd4b39; }
+
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .static-page-header h1 {
+        font-size: 2.5rem;
+    }
+    .static-page-header p {
+        font-size: 1rem;
+    }
+    .static-page-body,
+    .contact-form-container,
+    .track-order-container,
+    .order-status-container {
+        padding: 25px;
+    }
+}
