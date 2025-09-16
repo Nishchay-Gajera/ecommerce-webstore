@@ -1,0 +1,68 @@
+/* ===================================================================
+   FAQ PAGE STYLES
+   =================================================================== */
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--color-primary);
+}
+
+.faq-question i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 10px 20px 10px;
+    margin: 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Active state for accordion */
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed for longer answers */
+}

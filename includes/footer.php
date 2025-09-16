@@ -17,16 +17,15 @@
                     <li><a href="about.php">About Us</a></li>
                     <li><a href="contact.php">Contact Us</a></li>
                     <li><a href="privacy.php">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="terms_and_conditions.php">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Customer Service</h4>
                 <ul>
                     <li><a href="track_order.php">Track Order</a></li>
-                    <li><a href="#">Return & Exchange</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="return_and_refund_policy.php">Return & Exchange</a></li>
+                    <li><a href="faqs.php">FAQs</a></li>
                 </ul>
             </div>
             <div class="footer-column newsletter-column">

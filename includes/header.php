@@ -24,10 +24,8 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divine Syncserv - Wedding & Festive Clothing</title>
     
-    <!-- Main Stylesheet for the entire site -->
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- CONDITIONAL: Load page-specific stylesheets -->
     <?php if ($active_page == 'product_details.php'): ?>
         <link rel="stylesheet" href="assets/css/product_details.css">
     <?php elseif ($active_page == 'cart.php'): ?>
@@ -36,11 +34,13 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
         <link rel="stylesheet" href="assets/css/checkout_style.css">
     <?php elseif ($active_page == 'category.php'): ?>
         <link rel="stylesheet" href="assets/css/category.css">
-    <?php elseif (in_array($active_page, ['contact.php', 'about.php', 'privacy.php', 'track_order.php', 'order_status.php'])): ?>
+    <?php elseif ($active_page == 'faq.php'): ?>
+        <link rel="stylesheet" href="assets/css/static_pages.css">
+        <link rel="stylesheet" href="assets/css/faq_style.css">
+    <?php elseif (in_array($active_page, ['contact.php', 'about.php', 'privacy.php', 'track_order.php', 'order_status.php', 'terms_and_conditions.php', 'return_and_refund_policy.php'])): ?>
         <link rel="stylesheet" href="assets/css/static_pages.css">
     <?php endif; ?>
 
-    <!-- External Libraries & Fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
