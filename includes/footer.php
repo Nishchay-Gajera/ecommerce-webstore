@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="track_order.php">Track Order</a></li>
                     <li><a href="return_and_refund_policy.php">Return & Exchange</a></li>
-                    <li><a href="faqs.php">FAQs</a></li>
+                    <li><a href="faq.php">FAQs</a></li>
                 </ul>
             </div>
             <div class="footer-column newsletter-column">
