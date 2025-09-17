@@ -22,7 +22,7 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divine  syncserve - Wedding & Festive Clothing</title>
+    <title>Divine syncserve - Wedding & Festive Clothing</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
     
@@ -34,6 +34,8 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
         <link rel="stylesheet" href="assets/css/checkout_style.css">
     <?php elseif ($active_page == 'category.php'): ?>
         <link rel="stylesheet" href="assets/css/category.css">
+    <?php elseif ($active_page == 'search.php'): ?>
+        <link rel="stylesheet" href="assets/css/search_results.css">
     <?php elseif ($active_page == 'faq.php'): ?>
         <link rel="stylesheet" href="assets/css/static_pages.css">
         <link rel="stylesheet" href="assets/css/faq_style.css">
@@ -50,18 +52,22 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
 <header class="main-header">
     <div class="container header-content">
         <a href="index.php" class="logo">
-            <img src="images/logo.png" alt="Aurelie Logo">
+            <img src="images/logo.png" alt="Divine syncserve Logo">
         </a>
         
+        <!-- Updated Search Container with AJAX functionality -->
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search For Products...">
-            <select class="search-category">
-                <option>All Products</option>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search For Products..." autocomplete="off">
+            <select id="searchCategory" class="search-category">
+                <option value="">All Products</option>
                 <?php foreach($all_categories as $category): ?>
                     <option value="<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></option>
                 <?php endforeach; ?>
             </select>
-            <button class="search-button"><i class="fas fa-search"></i></button>
+            <button type="button" id="searchButton" class="search-button"><i class="fas fa-search"></i></button>
+            
+            <!-- AJAX Search Results Dropdown -->
+            <div id="searchResults" class="search-results-dropdown"></div>
         </div>
 
         <div class="header-icons">
@@ -79,8 +85,13 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
                     <span class="cart-count-badge"><?php echo $cart_item_count; ?></span>
                 <?php endif; ?>
             </a>
-            <a href="#" class="icon-link mobile-search-icon"><i class="fas fa-search"></i></a>
-            <button class="hamburger-menu"><i class="fas fa-bars"></i></button>
+            <!-- FIXED: Remove href and make it a button to prevent # in URL -->
+            <button type="button" class="icon-link mobile-search-icon" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="hamburger-menu" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </div>
 </header>
