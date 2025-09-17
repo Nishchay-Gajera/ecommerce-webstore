@@ -108,6 +108,108 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- Live Search Functionality ---
+    const searchInput = document.getElementById('searchInput');
+    const searchCategory = document.getElementById('searchCategory');
+    const searchResultsContainer = document.getElementById('searchResults');
+    let debounceTimer;
+
+    if (searchInput && searchResultsContainer && searchCategory) {
+        searchInput.addEventListener('input', function() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                const query = this.value;
+                const category = searchCategory.value;
+
+                if (query.trim().length > 1) {
+                    fetch(`ajax_search.php?query=${encodeURIComponent(query)}&category=${encodeURIComponent(category)}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            displaySearchResults(data, query);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching search results:', error);
+                            searchResultsContainer.style.display = 'none';
+                        });
+                } else {
+                    searchResultsContainer.innerHTML = '';
+                    searchResultsContainer.style.display = 'none';
+                }
+            }, 300); // 300ms debounce delay
+        });
+
+        // Hide results when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !searchResultsContainer.contains(e.target)) {
+                searchResultsContainer.style.display = 'none';
+            }
+        });
+
+        // Also hide on focus out if not clicking on results
+        searchInput.addEventListener('blur', function() {
+            // A small delay is needed to allow clicks on search results to register
+            setTimeout(() => {
+                if (!searchResultsContainer.matches(':hover')) {
+                    searchResultsContainer.style.display = 'none';
+                }
+            }, 200);
+        });
+        
+        // Show results on focus if there's text
+         searchInput.addEventListener('focus', function() {
+            if (this.value.trim().length > 1 && searchResultsContainer.innerHTML !== '') {
+                 searchResultsContainer.style.display = 'block';
+            }
+        });
+    }
+
+    function displaySearchResults(products, query) {
+        searchResultsContainer.innerHTML = ''; // Clear previous results
+
+        if (products.length > 0) {
+            products.forEach(product => {
+                const item = document.createElement('a');
+                item.href = `product_details.php?id=${product.id}`;
+                item.classList.add('search-result-item');
+
+                const imageUrl = product.image_url ? `uploads/product-image/${product.image_url}` : 'https://placehold.co/50x60/f0f0f0/ccc?text=N/A';
+
+                item.innerHTML = `
+                    <img src="${imageUrl}" alt="${escapeHTML(product.name)}" class="search-result-image">
+                    <div class="search-result-info">
+                        <span class="search-result-name">${escapeHTML(product.name)}</span>
+                        <span class="search-result-price">₹${parseFloat(product.price).toFixed(2)}</span>
+                    </div>
+                `;
+                searchResultsContainer.appendChild(item);
+            });
+            
+            // Add a "View all results" link
+            const viewAll = document.createElement('a');
+            viewAll.href = `search.php?query=${encodeURIComponent(query)}`;
+            viewAll.classList.add('view-all-results');
+            viewAll.textContent = 'View all results';
+            searchResultsContainer.appendChild(viewAll);
+
+            searchResultsContainer.style.display = 'block';
+        } else {
+            searchResultsContainer.innerHTML = '<div class="search-result-item">No products found.</div>';
+            searchResultsContainer.style.display = 'block';
+        }
+    }
+    
+    function escapeHTML(str) {
+        return str.replace(/[&<>"']/g, function(match) {
+            return {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[match];
+        });
+    }
+
     // --- Product Carousels Initialization ---
     const productCarousels = document.querySelectorAll('.product-carousel');
     
@@ -142,3 +244,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+    

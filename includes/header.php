@@ -34,6 +34,8 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
         <link rel="stylesheet" href="assets/css/checkout_style.css">
     <?php elseif ($active_page == 'category.php'): ?>
         <link rel="stylesheet" href="assets/css/category.css">
+    <?php elseif ($active_page == 'search.php'): ?>
+        <link rel="stylesheet" href="assets/css/search_results.css">
     <?php elseif ($active_page == 'faq.php'): ?>
         <link rel="stylesheet" href="assets/css/static_pages.css">
         <link rel="stylesheet" href="assets/css/faq_style.css">
@@ -53,16 +55,16 @@ $active_page = basename($_SERVER['PHP_SELF']); // Get the current page filename
             <img src="images/logo.png" alt="Aurelie Logo">
         </a>
         
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search For Products...">
-            <select class="search-category">
-                <option>All Products</option>
+        <form action="search.php" method="GET" class="search-container">
+            <input type="text" name="query" class="search-input" placeholder="Search For Products..." required>
+            <select name="category" class="search-category">
+                <option value="">All Products</option>
                 <?php foreach($all_categories as $category): ?>
                     <option value="<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></option>
                 <?php endforeach; ?>
             </select>
-            <button class="search-button"><i class="fas fa-search"></i></button>
-        </div>
+            <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+        </form>
 
         <div class="header-icons">
             <a href="#" class="account-link">
