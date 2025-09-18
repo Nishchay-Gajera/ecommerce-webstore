@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
                 <div class="contact-info-item">
                     <i class="fas fa-phone-alt"></i>
                     <h3>Call Us</h3>
-                    <p><a href="tel:+911234567890">+91 87358 26083  </a></p>
+                    <p><a href="tel:+911234567890">+91 8866636848</a></p>
                 </div>
             </div>
         </div>
